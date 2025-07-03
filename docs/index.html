@@ -1,0 +1,377 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="./style.css">
+        <link rel="shortcut icon" href="https://raw.githubusercontent.com/AlonsoAliaga/minecraft-color/main/assets/images/logo.png" type="image/png">
+        <link rel="icon" href="https://raw.githubusercontent.com/AlonsoAliaga/minecraft-color/main/assets/images/logo.png" type="image/png">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        
+        <title>Minecraft Color Generator | AlonsoAliaga Development</title>
+
+        <meta name="theme-color" content="#9a14ff"/>
+        <meta property="og:title" content="Minecraft Color Generator (HEX/RGB support) | AlonsoAliaga Development">
+        <meta property="og:key" content="Minecraft Color Generator (HEX/RGB support) | AlonsoAliaga Development">
+        <meta property="og:image" content="https://raw.githubusercontent.com/AlonsoAliaga/minecraft-color/main/assets/images/logo.png">
+        <meta property="og:description" content="Preview your minecraft colored text and test your messages and announcements. Supports all minecraft formatting codes and hex. Multiple preview styles: text, motd, lore and more!">
+        <meta property="description" content="Preview your minecraft colored text and test your messages and announcements. Supports all minecraft formatting codes and hex. Multiple preview styles: text, motd, lore and more!">
+        <meta name="og:keywords" content="colors, minecraft, generator, spigot, bungeecord, paper, alonsoaliaga, minecraft, plugins, html, css, javascript, java, hex, rgb, generator, alonsoaliaga.github.io, alonsoaliaga.com, Minecraft hex generator,Minecraft hex color tool,gradient generator for Minecraft,Minecraft text gradient tool,Minecraft color presets,MiniMessage hex generator,Minecraft gradient maker,Minecraft chat colors,Minecraft hex syntax,Minecraft color codes,PlaceholderAPI hex,Minecraft hex presets,Minecraft gradient builder,Minecraft gradient preview,Minecraft RGB text,hex decode tool for Minecraft,decode hex gradient,color string decoder,convert hex to gradient,chat gradient editor,Minecraft scoreboard color,Minecraft tablist color,custom gradient chat,Minecraft RGB codes,Minecraft formatting tool,Minecraft color string parser,save gradient for Minecraft,load Minecraft hex gradient,Minecraft font color manager,Minecraft plugin dev tool,Minecraft text colorizer,custom rank color,Minecraft prefix gradient,color formatting for plugins,Minecraft hex tag tool,chat message colorizer,Minecraft plugin utility,MiniMessage color preview,Minecraft rank color generator,Minecraft name color generator,LuckPerms hex colors,chat hex formatting,PlaceholderAPI gradient plugin,ItemsAdder hex colors,Oraxen chat gradient,Minecraft UI gradient,Minecraft hex font preview,font color formatting,text color generator Minecraft,color string saver Minecraft,color gradient visualizer,Minecraft gradient editor,creador de degradados Minecraft,generador de colores hex Minecraft,formato hex para Minecraft,gradiente de colores en Minecraft,personalizar texto Minecraft,colores en scoreboard,colores en tablist,editar color de texto Minecraft,plugin de colores para Minecraft,códigos de color Minecraft,personalizar rangos con color,generador de texto RGB,guardar degradado Minecraft,importar colores hex,Minecraft español,crear degradado visual,Minecraft herramienta de color,herramienta para desarrolladores de plugins,formato MiniMessage en español,degradados en plugins,color personalizado para jugadores">
+        <meta name="keywords" content="colors, minecraft, generator, spigot, bungeecord, paper, alonsoaliaga, minecraft, plugins, html, css, javascript, java, hex, rgb, generator, alonsoaliaga.github.io, alonsoaliaga.com, Minecraft hex generator,Minecraft hex color tool,gradient generator for Minecraft,Minecraft text gradient tool,Minecraft color presets,MiniMessage hex generator,Minecraft gradient maker,Minecraft chat colors,Minecraft hex syntax,Minecraft color codes,PlaceholderAPI hex,Minecraft hex presets,Minecraft gradient builder,Minecraft gradient preview,Minecraft RGB text,hex decode tool for Minecraft,decode hex gradient,color string decoder,convert hex to gradient,chat gradient editor,Minecraft scoreboard color,Minecraft tablist color,custom gradient chat,Minecraft RGB codes,Minecraft formatting tool,Minecraft color string parser,save gradient for Minecraft,load Minecraft hex gradient,Minecraft font color manager,Minecraft plugin dev tool,Minecraft text colorizer,custom rank color,Minecraft prefix gradient,color formatting for plugins,Minecraft hex tag tool,chat message colorizer,Minecraft plugin utility,MiniMessage color preview,Minecraft rank color generator,Minecraft name color generator,LuckPerms hex colors,chat hex formatting,PlaceholderAPI gradient plugin,ItemsAdder hex colors,Oraxen chat gradient,Minecraft UI gradient,Minecraft hex font preview,font color formatting,text color generator Minecraft,color string saver Minecraft,color gradient visualizer,Minecraft gradient editor,creador de degradados Minecraft,generador de colores hex Minecraft,formato hex para Minecraft,gradiente de colores en Minecraft,personalizar texto Minecraft,colores en scoreboard,colores en tablist,editar color de texto Minecraft,plugin de colores para Minecraft,códigos de color Minecraft,personalizar rangos con color,generador de texto RGB,guardar degradado Minecraft,importar colores hex,Minecraft español,crear degradado visual,Minecraft herramienta de color,herramienta para desarrolladores de plugins,formato MiniMessage en español,degradados en plugins,color personalizado para jugadores">
+        <meta property="og:url" content="https://alonsoaliaga.github.io/index.html">
+        <meta property="og:site_name" content="Minecraft Color Generator - AlonsoAliaga Development" />
+
+    </head>
+
+    <body class="dark">
+        <div id="online-counter" data-failed="0" style="color: white;position: relative;background-color: green;height: 30px;display: flex; align-items: center;justify-content: center;">🟢 0 online previewing strings decorations with our tool!</div>
+        <div class="content">
+            <div class="header">
+                <h1 style="font-family: MinecraftBold;"><a href="https://alonsoaliaga.com/minecraft-color" rel="noopener" target="_blank">Minecraft Color</a> Generator</h1>
+                <h2 style="font-size: 20px; color: rgb(255, 71, 71)" data-i18n="use-chrome">Use Google Chrome or Opera for a better experience. Edge is reported as not compatible!</h2>
+                <div class="options" style="padding: 10px 10px 10px 10px; margin-bottom: 10px;">
+                    <h2 class="rainbow" style="font-size:25px; color:transparent" data-i18n="how-different">How is this different from other generators?</h2>
+                    <span data-i18n="how-different-answer">Well, there are many. But this is the easiest to use, and has <b class="rainbow">MANY</b> options 👀</span><br>
+                    <span data-i18n="how-different-answer-2">Give it a try and you'll see ^^</span><br><br>
+                    <!-- <h2 style="font-size: 20px; color: rgb(255, 71, 71)">No more paying comissions for simple ranks textures!</h2> -->
+                    <span style="font-size: 17px;">
+                      <b data-i18n="cool-ideas">⚠️ If you have cool ideas, suggest them in our <a href="https://alonsoaliaga.com/discord" rel="noopener" target="_blank">official discord server.</a></b><br>
+                    </span>
+                    <span style="font-size: 12px;">
+                      <b><img height="12px" src="https://cdn-icons-png.flaticon.com/512/174/174861.png"> <span data-i18n="if-tool-useful">If you found this tool useful, consider <a href="https://alonsoaliaga.com/donate" rel="noopener" target="_blank">making a donation</a> for our hard work. We appreciate it!</span></b><br>
+                      <!-- <b><img height="15px" src="https://raw.githubusercontent.com/AlonsoAliaga/mcpfp/main/assets/images/paypal_logo.png"> If you found this tool useful, consider <a href="https://alonsoaliaga.com/donate" rel="noopener" target="_blank">making a donation</a> for our hard work. We appreciate it!</b><br> -->
+                    </span>
+                </div>
+                <span id="snackbar" data-i18n="successfully-copied"><b>💎 Successfully Copied! 💎</b><br><span style="font-size: small;">Thanks for using our tool!</span></span>
+                <div style="display: inline-flex;align-items: center;">
+                    <span style="font-family: MinecraftBold;" data-i18n="site-options">Site options:</span>&nbsp;
+                    <div id="appearance" style="display: inline-block;font-family: MinecraftBold;padding: 5px 10px 5px 10px;" class="darkbuttonboxes">
+                        <input type="checkbox" checked id="darkmode" onclick="toggleDarkmode();"></input>
+                        <label for="darkmode" style="margin-bottom: 0px;margin-top: 0px;" data-i18n="dark-mode"> Dark Mode 👁‍🗨</label>
+                    </div>&nbsp;
+                    <div onclick="(()=>{
+                            startUnlockFeature('unlock-features','New Features','unlock-features-div');
+                        })()" id="unlock-features-div" style="width: 185px;background-color: #9eff83;display: inline-block;font-family: MinecraftBold;padding: 6px 12px;border-radius: 13px;outline: none;cursor: pointer;" class="darkbuttonboxes">
+                        <input data-i18n="more-features" style="display: none;" type="checkbox" checked id="unlock-features">More features? 🧪</input>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <br>
+            <div id="custom-colors-section" style="display: none;">
+                <fieldset class="group" style="padding: 5px 15px;border-radius: 10px;"> 
+                    <legend>&nbsp;&nbsp;&nbsp;Custom colors 🎨&nbsp;&nbsp;&nbsp;</legend>
+                    <span style="margin-bottom: 5px;">💡 You can create or edit these colors and use them in your texts to save time!</span>
+                    <div id="custom-colors-filled" class="grid-container">
+                      <!-- Each of these will be one item in the grid -->
+
+                    </div>
+                </fieldset>
+                <br>
+            </div>
+            <div>
+                <div id="text-showcase" data-mode="text" class="showcase-class" style="display: none;width: 100%;z-index: -999999;">
+                    <div style="display: flex;width: 100%;justify-content: center;">
+                        <div id="showcase-text-mode-option" style="line-height: 15px;border-color: #3d2626;border-width: 5px;border-radius: 15px;border-style: solid;width: 80%;padding: 20px 10px 20px 10px;background-color: #ffb3b3;">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div id="lore-showcase" data-mode="lore" class="showcase-class" style="justify-content: center;display: none;width: 100%;z-index: -999999;">
+                    <!-- <img style="z-index: -9999; position: absolute;left: translateX(150px);" src="https://preview.redd.it/concept-art-of-ui-for-an-inventory-update-v0-32g3u4g46x0c1.jpg?width=640&crop=smart&auto=webp&s=dee3c4bb3bee88e2abbedec384ff87883df7e7b1"></img> -->
+                    <div style="display: flex;justify-content: center;">
+                        <div id="showcase-lore-mode-option" style="display: block;text-align: left;width: 100%;line-height: 15px;width: min-content;" class="lore-item">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div id="motd-showcase" data-mode="motd" class="showcase-class" style="display: none;width: 100%;z-index: 999999;">
+                    <div style="display: flex;justify-content: center;background: url('https://i.imgur.com/GMwGfAW.png');">
+                      <div class="motd-preview" style="font-family: Minecraftia, MinecraftRegular;">
+                        <img id="motd-icon" class="server-icon" src="https://i.imgur.com/wDASRvr.gif" onclick="openIconUploadBox(event)" alt="📤 Click to upload your icon!">                   
+                        <div class="motd-content-right">
+                          <div class="top-line-container" style="font-size: 18px;">
+                            <div id="motd-saved-name" class="network-title"></div>
+                            <div class="server-status">
+                              <span id="random-players">1/20</span>
+                              <img src="https://i.imgur.com/etolITx.png" alt="Ping Icon">
+                            </div>
+                          </div>
+                          <div class="motd-text">
+                            <div id="showcase-motd-mode-option" style="line-height: 18px;font-size: 20px;text-align: left;padding-top: 10px;" class="server-name">§eMinecraft Server</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div id="chat-showcase" data-mode="chat" class="showcase-class" style="display: none;width: 100%;">
+                    <div style="background-size: cover !important;height: fit-content;display: flex;justify-content: center;flex-direction: column;justify-content: flex-end;padding: 10px;
+                        background: url('https://images.steamusercontent.com/ugc/2310974141604980016/B4EF3A7A2D1772DE26B1A6F51CE33A04FD8BB917/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false') center no-repeat;">
+                        <div id="showcase-chat-mode-option" class="chat-shadow" style="width: 90%;">
+                            <div class="chat-entry">You Shoudln't be reading this..</div>
+                            <div class="chat-entry">You Shoudln't be reading this..</div>
+                            <div class="chat-entry">You Shoudln't be reading this..</div>
+                            <div class="chat-entry">You Shoudln't be reading this..</div>
+                        </div>
+                        <span style="font-size: 5px;">⠀</span>
+                        <div id="text-pointer" class="chat-shadow" style="display: flex; align-items: flex-start;">_</div>
+                    </div>
+                    <span style="font-size: 12px; color: #8f8f8f85;">🔎 Random ranks and player names are displayed to help chat preview.</span>
+                    <br>
+                </div>
+                <div id="sign-showcase" data-mode="sign" class="showcase-class" style="display: none;width: 50%;">
+                    <div style="display: flex;width: 100%;justify-content: center;">
+                        <div id="showcase-sign-mode-option" style="background-repeat: no-repeat;background-size: contain !important;
+                            background: url(https://i.imgur.com/YfXtRQo.png) repeat-x center top;
+                            height: 172px !important;background-position: center;background-size: 440px !important;border-color: #8d7544;border-width: 2px;
+                            border-radius: 5px;border-style: solid;width: 70%;padding: 11px 10px 20px 10px;background-color: #ffb3b3;">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div id="hover-box">
+                    <span class="rainbow" style="color: transparent;font-size: 23px;">Rank textures!</span><br>
+                    <span style="font-size: 19px;">Create amazing ranks</span><br>
+                    <span style="font-size: 19px;">like this one!</span><br>
+                    <img height="180px" src="https://raw.githubusercontent.com/AlonsoAliaga/rank-textures/main/assets/images/logo.png"></img>
+                    <br>
+                    <span style="color: #ffb81e;font-size: 23px;">Click here!</span>
+                </div>
+            </div>
+            <fieldset class="group" style="padding: 5px 15px;border-radius: 10px;"> 
+                <legend>&nbsp;&nbsp;&nbsp;Start editing 🎨&nbsp;&nbsp;&nbsp;</legend>
+                <fieldset class="group" style="padding: 10px 15px;border-radius: 10px; margin: 0px 4%;"> 
+                    <legend>&nbsp;&nbsp;&nbsp;Style your text 🎩&nbsp;&nbsp;&nbsp;</legend>
+                    <textarea id="input-content" rows="3" class="darkbuttonboxes" style="height: 120px;border-radius: 15px;padding: 2px 15px;width: 60%;">&5&k||||||||&5Obsidian&k||||||||
+&9&mStrike
+&6&nUnderline</textarea>
+                </fieldset><br>
+                <fieldset class="group" style="padding: 10px 15px;border-radius: 10px; margin: 0px 4%;"> 
+                    <legend>&nbsp;&nbsp;&nbsp;Showcase mode 🖼️&nbsp;&nbsp;&nbsp;</legend>
+                    <div id="showcase-div" style="display: flex;justify-content: center;">
+                    </div>
+                </fieldset>
+                <br>
+                <!-- <br>
+                <span>Showcase mode:</span> <div id="showcase-mode-div" onclick="toggleMode(this,event);" class="darkbuttonboxes"
+                    style="cursor:pointer;width: 200px;display: inline-block;font-family: MinecraftBold;margin: 2px 2px 2px 2px;padding: 5px 10px 5px 10px;">
+                  Loading..
+                </div>
+                <div id="button-ticket-border-shadow-div" style="width: 50%;display: inline-block;font-family: MinecraftBold;margin: 2px 2px 2px 2px;padding: 5px 10px 5px 10px;" class="darkbuttonboxes">
+                  <input type="checkbox" name="button-ticket-border-shadow" id="button-ticket-border-shadow" data-target-box="target-box" onclick="toggleBox(this,event);"></input>
+                  <label for="button-ticket-border-shadow" style="margin-bottom: 0px;margin-top: 0px;margin-left: 0px;margin-right: 10px;"> Border shadow 👥</label>
+                </div>
+                <br>
+                <div id="target-box" class="hidden-box">
+                  <fieldset class="group" style="padding: 0px;border-radius: 10px;"> 
+                    <legend>&nbsp;&nbsp;&nbsp;Pick your colors 🎨&nbsp;&nbsp;&nbsp;</legend>
+                    Mode: <div id="button-ticket-border-shadow-mode-div" style="width: 50%;display: inline-block;font-family: MinecraftBold;margin: 2px 2px 2px 2px;padding: 5px 10px 5px 10px;" class="darkbuttonboxes">
+                      <button type="checkbox" class="hidecheckbox" name="button-ticket-border-shadow-mode" data-value="1" id="button-ticket-border-shadow-mode" onclick="toggleBox(event,this);"></button>
+                      <label id="ticket-mode-string" for="button-ticket-border-shadow-mode" style="margin-bottom: 0px;margin-top: 0px;margin-left: 0px;margin-right: 10px;"> Mode #1</label>
+                    </div><br>
+                    Color: <input type="color" id="ticket-border-shadow-picker" value="#000000" onchange="updateRankImage();"></input><br>
+                    <p style="font-size: 5px;"> </p>
+                    Opacity: <button class="button-small" onclick="modifyTicketBorderShadowOpacity(event,-1);updateRankImage();"><</button>
+                    <button style="font-size: 18px;font-family: MinecraftBold;padding: 5px 5px 5px 5px;" id="ticket-border-shadow-picker-opacity">10</button>
+                    <button class="button-small" onclick="modifyTicketBorderShadowOpacity(event,+1);updateRankImage();">></button><br>
+                  </fieldset>
+                  <p style="font-size: 8px;"> </p>
+                </div>
+                <br> -->
+            </fieldset>
+            <br>
+            <div class="options-tools">
+              <div style="border-radius: 25px;font-size: 18px ;padding-top: 5px;padding-bottom: 5px; font-family: MinecraftRegular;" class="examples">
+                <h2 data-i18n="more-tools-for-you" style="font-size: 18px; font-family: MinecraftBold;">More tools for you:</h2>
+                <div style="text-align: left;font-size: 20px;position: relative;left: 50px !important;" id="tools-for-you">
+                </div>
+                <h2 style="color: transparent;font-size: 18px ;text-align: center; font-family: MinecraftBold;"><a href="https://alonsoaliaga.com/tools" rel="noopener" target="_blank">AlonsoAliaga Development</a></h2>
+              </div>
+            </div>
+            <div>   
+              <h2 data-i18n="footer" style="font-size: 15px ;text-align: center;">❤️ Thanks to <a href="https://alonsoaliaga.com/donate" rel="noopener" target="_blank">AlonsoAliaga</a> for his hard work during the development of this tool.</h2>
+              <br>
+              <div id="mybutton">
+                <div style="position: center;display: inline-block;">
+                  <button class="buttonface"><a href="https://alonsoaliaga.github.io"><img src="https://raw.githubusercontent.com/AlonsoAliaga/alonsoaliaga.github.io/main/assets/img/apple-touch-icon.png"></a></button>
+                  <br>
+                  <div id="visitor-counter" style="text-align: center;">
+                    <span id="counter-amount" style="font-family: MinecraftBold;font-weight: bold;">Visits: 0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        let unlockFeaturesUniqueID = aRandomUUID();
+        const SECRET_SALT_FEATURE = "YourSuperSecretSaltForUnlockFeature123!@#Feature&$MC";
+        let siteName = `MinecraftColor`;
+        (()=>{
+            window.addEventListener('message', async function(event) {
+                if(typeof event.data != "undefined") {
+                    if (event.data && event.data.type === 'unlockFeature') {
+                      //console.log('Received unlock feature from ads page.');
+                      processUnlock(event.data);
+                      return;
+                    }
+                }
+            });
+        })();
+        function unlockFeature(featureId,featureName,featureElementId,timeLeft) {
+            //console.log(`Unlocking ${featureName}..`)
+            let element = document.getElementById(featureElementId);
+            if(featureId == "unlock-features") {
+                if(!element) return;
+                element.innerText = `UNLOCKED FEATURES! 🚀\r\nExpires in ${timeLeft}`;
+                element.onclick = function(event){event.preventDefault();return false;};
+                element.querySelectorAll(".overlay").forEach((e,i)=>{
+                    e.remove();
+                })
+                document.getElementById("custom-colors-section").style.display = null;
+                return;
+            }
+            if(featureElementId.endsWith("-mode-option")) {
+                //console.log(`Unlocking a showcase mode: ${featureElementId}`);
+                element.onclick = function(){selectMode(featureId)}
+            }
+            if(element) {
+                //console.log(`Found element: ${featureElementId}`)
+                element.innerHTML = element.innerHTML + `<br><p style="margin: 0px" class="unlock-text-mode">Unlocked for<br>${timeLeft}</p>`
+                element.querySelectorAll(".overlay").forEach((e,i)=>{
+                    e.remove();
+                })
+            }else{
+                //console.log(`NOT found element: ${featureElementId}`)
+            }
+        }
+        function processUnlock(data) {
+            if(data) {
+                //console.log(data);
+                let feature = data.feature;
+                let featureElementId = data.featureElementId;
+                let featureName = data.featureName;
+                let uniqueId = data.uniqueId;
+                //console.log(uniqueId,unlockFeaturesUniqueID)
+                if(uniqueId == unlockFeaturesUniqueID) {
+                    setTimeout(()=>checkUnlock(feature,featureName,featureElementId),1000);
+                }
+            }
+        }
+        async function generateSha256Hash(message) {
+            const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8); // hash the message
+            const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+            return hashHex;
+        }
+        async function checkUnlock(featureId,featureName,featureElementId) {
+            //console.log(`Checking unlocked for: ${featureId} / ${featureName} / ${featureElementId}`)
+            let key = `appUnlockDataFeature-${btoa(siteName)}-${btoa(featureId)}`
+            let data = localStorage.getItem(key);
+            //console.log(data)
+            if(typeof data != "undefined" && data != null) {
+                let processedData;
+                try{
+                    processedData = JSON.parse(data);
+                }catch(e){
+                    processedData = {}
+                }
+                const { unlockedUntil, signature } = processedData;
+                if (typeof unlockedUntil !== 'number' || typeof signature !== 'string') {
+                    localStorage.removeItem(key); // Clear invalid data
+                    //console.warn("Invalid stored data");
+                }else{
+                    const expectedSignature = await generateSha256Hash(unlockedUntil + SECRET_SALT_FEATURE);
+                    // Check if the signature matches AND if the timestamp is still valid
+                    const currentTime = Date.now();
+                    if (signature === expectedSignature && currentTime < unlockedUntil) {
+                        const remainingTimeMs = unlockedUntil - currentTime;
+                        const remainingHours = Math.floor(remainingTimeMs / (1000 * 60 * 60));
+                        const remainingMinutes = Math.floor((remainingTimeMs % (1000 * 60 * 60)) / (1000 * 60));
+                        const timeLeft = `${remainingHours}h ${remainingMinutes}m`;
+                        console.warn("Unlock data feature VALID! Working!");
+                        if(typeof featureName != "undefined") unlockFeature(featureId,featureName,featureElementId,timeLeft);
+                        return true;
+                    }else{
+                        console.warn("Unlock data feature invalid! Signature mismatch.");
+                        // Either signature mismatch (tampered) or unlock period expired
+                        if (signature !== expectedSignature) {
+                            // For a real application, you might want to log this to a server
+                            // to detect and analyze tampering attempts.
+                        }
+                        localStorage.removeItem(key); // Clear invalid data
+                    }
+                }
+            }
+            return false;
+        }
+        function startUnlockFeature(featureId,featureName,featureElementId) {
+            let childWindow = window.open('supportus.html', '_blank');
+            let data = {featureName:featureName,featureId:featureId,featureElementId:featureElementId,uniqueId:unlockFeaturesUniqueID};
+            //console.log(`Sending data to start unlock:`)
+            //console.log(data)
+            setTimeout(()=>childWindow.postMessage(data, '*'),500);
+        }
+        function startUnlockFeatureWithId(featureElementId) {
+            let childWindow = window.open('supportus.html', '_blank');
+            let element = document.getElementById(featureElementId);
+            if(element) {
+                let data = {featureName:element.dataset.featureName,featureId:element.dataset.featureId,featureElementId:featureElementId,uniqueId:unlockFeaturesUniqueID};
+                //console.log(`Sending data to start unlock:`)
+                //console.log(data)
+                setTimeout(()=>childWindow.postMessage(data, '*'),500);
+            }
+        }
+        function aRandomUUID() {
+            if (typeof crypto.randomUUID === 'function') {
+                return crypto.randomUUID();
+            } else {
+                // Fallback manual
+                const bytes = crypto.getRandomValues(new Uint8Array(16));
+                bytes[6] = (bytes[6] & 0x0f) | 0x40;
+                bytes[8] = (bytes[8] & 0x3f) | 0x80;
+                const hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+                return [
+                  hex.substring(0, 8),
+                  hex.substring(8, 12),
+                  hex.substring(12, 16),
+                  hex.substring(16, 20),
+                  hex.substring(20)
+                ].join('-');
+            }
+        };
+        function checkUnlockables() {
+            [["unlock-features","New Features","unlock-features-div"]].forEach(async(id)=>{
+                if(typeof id == "string") {
+                    let element = document.getElementById(id);
+                    if(element) {
+                        checkUnlock(element.dataset.featureId,element.dataset.featureName,id);
+                    }
+                }else{
+                    let element = document.getElementById(id[2]);
+                    if(element) {
+                        checkUnlock(id[0],id[1],id[2]);
+                    }
+                }
+            });
+        }
+        checkUnlockables();
+    </script>
+    <script src="script.js"></script>
+    <script src="resources.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5185973148525065"
+        crossorigin="anonymous"></script>
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+      kofiWidgetOverlay.draw('alonsoaliaga', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Send love ❤️',
+        'floating-chat.donateButton.background-color': '#fcbf47',
+        'floating-chat.donateButton.text-color': '#323842'
+      });
+    </script>
+</html>

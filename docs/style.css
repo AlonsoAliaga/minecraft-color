@@ -1,0 +1,659 @@
+body {
+  margin: auto;
+  text-align: center;
+  font-family: MinecraftRegular;
+  list-style-type: none;
+}
+.hidecheckbox[type="checkbox"] {
+  display: none;
+}
+.options {
+  font-size: 20px;
+  border: 2px solid #aaa;
+  border-radius: 30px;
+  padding: 20px 50px 20px 50px;
+  position: relative;
+  border-radius: 30px;
+  /* width: 200px; */
+}
+h1, h2, h3 {
+    margin: 5px;
+}
+.options-tools {
+  font-size: 20px;
+  border: 2px solid #aaa;
+  border-radius: 30px;
+  /* padding: 0px 50px 10px 50px; */
+  position: relative;
+  border-radius: 30px;
+  width: 100%;
+  /* width: 200px; */
+}
+.rainbow {
+    position:relative;
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 2s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+@font-face {
+   font-family: MinecraftiaRegular;
+   src: url(../assets/fonts/MinecraftRegular.otf);
+   /* src: url(../assets/fonts/MinecraftiaRegular.ttf); */
+   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftiaRegular.ttf); */
+}
+@font-face {
+   font-family: MinecraftRegular;
+   src: url(../assets/fonts/MinecraftRegular.otf);
+   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftRegular.otf); */
+}
+@font-face {
+   font-family: MinecraftBold;
+   src: url(../assets/fonts/MinecraftBold.otf);
+   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftBold.otf); */
+}
+@font-face {
+   font-family: MinecraftItalic;
+   src: url(../assets/fonts/MinecraftItalic.otf);
+   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftItalic.otf); */
+}
+@font-face {
+   font-family: MinecraftBoldItalic;
+   src: url(../assets/fonts/MinecraftBoldItalic.otf);
+   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftBoldItalic.otf); */
+}
+@font-face {
+   font-family: MonocraftRegular;
+   src: url(../assets/fonts/Monocraft-Light.otf);
+   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Light.otf); */
+}
+@font-face {
+   font-family: MonocraftBold;
+   src: url(../assets/fonts/Monocraft-SemiBold.otf);
+   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Bold.otf); */
+}
+@font-face {
+   font-family: MonocraftItalic;
+   src: url(../assets/fonts/Monocraft-Italic.otf);
+   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Italic.otf); */
+}
+@font-face {
+   font-family: MonocraftBoldItalic;
+   src: url(../assets/fonts/Monocraft-SemiBold-Italic.otf);
+   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Bold-Italic.otf); */
+}
+fieldset.group  { 
+  margin: 0; 
+  padding: 0; 
+  /* margin-bottom: 1.25em;  */
+  padding: .125em; 
+} 
+fieldset.group legend { 
+  margin: 0; 
+  padding: 0; 
+  font-weight: bold; 
+  font-size: 100%; 
+}
+fieldset.button-solid button {
+  border: none;
+}
+#mybutton {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: MinecraftRegular;
+}
+#mybutton:hover {
+  bottom: 15px;
+  right: 15px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.buttonface {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.content {
+  margin: 10px auto;
+  width: 1000px;
+}
+.rainbow a:visited {
+  text-decoration: underline;
+  color: inherit;
+}
+.rainbow a {
+  color: inherit
+}
+.rainbow a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+a:visited,a {
+  color: rgb(23, 142, 246);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(246, 246, 23);
+  text-decoration: none;
+}
+  .successdark {
+  color: rgb(172, 255, 165);
+}
+.successlight {
+  color: rgb(7, 84, 0);
+}
+body.dark {
+  background-color:#1c1c1cd9;
+  color:rgb(208, 208, 208);
+}
+select.dark {
+  background-color:#27152c;
+  border-color:#2C3844;
+  color:white;
+}
+.lightbuttonboxes {
+  font-family: MinecraftRegular;
+  border-radius: 25px;
+  border-color:#333333;
+  background-color:#f8fdc9;
+  color:rgb(39, 39, 39);
+  border-style: solid;
+  border-width: 2px;
+}
+.darkbuttonboxes {
+  font-family: MinecraftRegular;
+  border-radius: 25px;
+  border-color:#25172f;
+  background-color:#ffd5f2;
+  color:rgb(39, 39, 39);
+  border-style: solid;
+  border-width: 2px;
+}
+.darktextboxes {
+  font-family: MinecraftRegular;
+  background-color:#e4d2de;
+  border-color:#43245c;
+  color:rgb(39, 39, 39);
+}
+fieldset.group  { 
+  margin: 0; 
+  padding: 0; 
+  /* margin-bottom: 1.25em;  */
+  padding: .125em; 
+} 
+fieldset.group legend { 
+  margin: 0; 
+  padding: 0; 
+  font-weight: bold; 
+  font-size: 100%; 
+}
+fieldset.button-solid button {
+  border: none;
+}
+.button-solid {
+  border: none;
+}
+ul.checkbox  {
+  margin: 0; 
+  padding: 0; 
+  margin-left: 20px; 
+  list-style: none; 
+  text-align: left;
+  list-style-type: none;
+  
+  column-width: 11em;
+  column-gap: 2em;
+  column-rule: 1px solid #676767;
+  column-count: 3;
+} 
+ul.checkbox li input { 
+  margin-right: -0.25em; 
+} 
+ul.checkbox li { 
+  border: 1px transparent solid; 
+  display:inline-block;
+  width:12em;
+} 
+ul.checkbox li label { 
+  list-style-type: none;
+} 
+ul.checkbox li:hover, 
+ul.checkbox li.focus  { 
+  background-color: lightyellow; 
+  border: 1px gray solid; 
+  color: rgb(138, 0, 99);
+  width: 12em; 
+}
+#snackbar {
+  visibility: hidden;
+  color: #fff;
+  background-color: #333;
+  min-width: 250px;
+  border-radius: 2px;
+  padding: 16px;
+  text-align: center;
+  bottom: 120px;
+  z-index: 100;
+  position: fixed;
+  left: calc(50% - 135px);
+}
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 5.5s;
+  animation: fadein 0.5s, fadeout 0.5s 5.5s;
+}
+/* Animations for fading in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 120px; opacity: 1;}
+}
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 120px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+  from {bottom: 120px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+@keyframes fadeout {
+  from {bottom: 120px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+.hidden-box {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.expanded {
+  height: fit-content !important;
+}
+.locked {
+  position: relative;
+}
+.locked .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 11px;
+  justify-content: center;
+  cursor: not-allowed;
+  z-index: 10;
+}
+.locked .overlay img {
+  width: 32px;
+  opacity: 0.6;
+}
+.locked .overlay span {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.adlockedhalf {
+  position: relative;
+}
+.adlockedhalf .overlay {
+  width: 100%;
+  padding: 15px;
+  position: absolute;
+  inset: 0;
+  background: rgba(236, 28, 28, 0.836);
+  display: flex;
+  flex-direction: row;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+  z-index: 10;
+}
+.adlockedhalf .overlay img {
+  width: 34px;
+}
+.adlockedhalf .overlay span {
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.adlocked {
+  position: relative;
+}
+.adlocked .overlay {
+  padding: 15px;
+  position: absolute;
+  inset: 0;
+  background: rgba(236, 28, 28, 0.836);
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+  z-index: 10;
+}
+.adlocked .overlay img {
+  width: 34px;
+}
+.adlocked .overlay span {
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.adlockedcard {
+	position: relative;
+}
+.adlockedcard .overlay {
+    display: flex !important;
+    line-height: 13px;
+	padding: 0px;
+	position: absolute;
+	inset: 0;
+	background: rgba(180, 32, 32, 0.979);
+	flex-direction: column;
+	border-radius: 11px;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 10;
+}
+.adlockedcard .overlay img {
+    image-rendering: pixelated;
+	width: 20px;
+}
+.adlockedcard .overlay span {
+	font-size: 0.9rem;
+	color: #ffffff;
+}
+/* Styles for the render card */
+.render-mode-card {
+    color: #232323;
+    display: flex;
+    flex-direction: column;       /* Stack items vertically */
+    align-items: center;          /* Center items horizontally */
+    justify-content: center;      /* Center items vertically */
+    border: 1px solid #ccc;       /* Optional: for visualization */
+
+    width: 140px;
+    padding: 5px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    vertical-align: middle;
+    min-height: 100px;
+}
+/* Hover effect for the card */
+.render-mode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.unlock-text-mode {
+    background-color: #ff5450;
+    color: white;
+    margin: 5px !important;
+    border: #ff141482;
+    border-width: 4px;
+    padding: 6px;
+    border-style: outset;
+}
+/* Styles for the image inside the card */
+.render-mode-card img {
+    max-width: 55%;
+    height: auto;
+    /* margin-bottom: 10px;          Space between image and text   */
+
+    width: 55%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 8px;
+}
+
+.lore-item {
+  background-color: #280027f2;
+  border: 1px solid #260062;
+  border-radius: 5px;
+  padding: 15px 10px;
+  width: fit-content;
+  min-width: fit-content;
+  z-index: 500;
+}
+
+/* span[style*="Minecraftia"] {
+  vertical-align: -1px;
+  line-height: 1.2;
+  text-underline-offset: -8px;
+  text-decoration-thickness: 1.5px;
+} */
+
+:root {
+  --shadow: rgb(250, 60, 60); /* or whatever color you want */
+}
+
+.fake-underline {
+  position: relative;
+  font-family: Minecraftia, monospace;
+  display: inline-block;
+}
+
+.fake-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8%; /* Thickness of underline */
+  background: currentColor;
+  /*bottom: 3px; /* Distance below the text */
+  bottom: 1px; /* Distance below the text */
+  /* box-shadow: 0.125em 0.125em 0 var(--shadow); */
+}
+
+.fake-strike {
+  position: relative;
+  font-family: Minecraftia, monospace;
+  display: inline-block;
+}
+
+.fake-strike::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8%; /* Thickness of the line */
+  background: currentColor;
+  top: 50%; /* Adjust this as needed for Minecraftia */
+  /*top: 18%; /* Adjust this as needed for Minecraftia */
+  transform: translateY(-50%); /* Center the line more precisely */
+  /* box-shadow: 0.125em 0.125em 0 var(--shadow); */
+}
+
+.motd-preview {
+  display: flex; /* Main flex container for icon and content */
+  width: 80%; /* Fixed width for the entire preview block */
+  /* border: 1px solid #000; */
+  border-radius: 4px;
+  padding: 8px 12px;
+  /* margin: 0 auto; */
+  /* box-shadow: 0 0 10px #000; */
+  /* box-sizing: border-box; */
+  flex-wrap: nowrap; /* Prevent wrapping on smaller screens, maintain fixed width */
+}
+.server-icon {
+  width: auto;
+  height: 96px;
+  image-rendering: pixelated;
+  /* border: 1px solid #000; */
+  margin-right: 12px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+.motd-content-right {
+  flex-grow: 1; /* Allow this content area to take remaining space */
+  display: flex;
+  flex-direction: column; /* Stack network line and MOTD lines vertically */
+  justify-content: center; /* Center content vertically if space allows */
+  min-width: 0; /* Allow content to shrink if necessary */
+}
+.top-line-container {
+  display: flex;
+  justify-content: space-between; /* Pushes network title left and status right */
+  align-items: center; /* Vertically align network title and status */
+  margin-bottom: 2px; /* Small gap between network line and MOTD lines */
+}
+.network-title {
+  color: #FFFFAA; /* A slightly different yellow/gold for distinction */
+  text-shadow: 1px 1px #000;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflow if text is too long */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+.motd-text {
+  display: flex;
+  flex-direction: column; /* Stack server name and description */
+  justify-content: center;
+}
+.server-name {
+  color: #fff89d;
+  text-shadow: 1px 1px #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.server-desc {
+  color: #a0a0a0;
+  text-shadow: 1px 1px #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.server-status {
+  color: white;
+  text-shadow: 1px 1px #000;
+  white-space: nowrap;
+  display: flex; /* Use flexbox for vertical alignment of text and img */
+  align-items: center; /* Vertically align items */
+  margin-left: 10px; /* Space between network title and status */
+  flex-shrink: 0; /* Prevent status from shrinking */
+}
+.server-status img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+span[style*="Minecraftia"] {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+#showcase-sign-mode-option span[style*="Minecraftia"] {
+  font-size: 39px !important;
+  line-height: 45.9px !important;
+}
+
+#hover-box {
+  font-size: 18px !important;
+  font-weight: bold;
+  position: fixed;
+  background: #000000de;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: none;
+  pointer-events: none;
+  z-index: 999;
+  border-width: 2px;
+  border-color: #220072;
+  border-style: solid;
+}
+
+#showcase-sign-mode-option {
+  overflow: hidden;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.chat-shadow {
+  background-color: rgba(0, 0, 0, 0.507);;
+  align-content: start;
+  padding: 5px 5px 5px 5px;
+}
+
+#showcase-chat-mode-option {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-entry {
+  display: flex;
+  text-align: start;
+  flex-direction: row;
+}
+
+/* Test */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 10fr);
+  gap: 7px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.option-color {
+  display: grid;
+  grid-template-columns: 30px 40px 1fr;
+  gap: 0px;
+  padding: 6px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  align-items: center;
+}
+
+.symbol {
+  width: 55%;
+  text-align: center;
+  font-size: 14px;
+  padding: 2px;
+}
+
+.colorpicker {
+  width: 75%;
+  height: 28px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.text {
+  width: 75%;
+  text-align: center;
+  font-size: 14px;
+  padding: 2px 4px;
+}
