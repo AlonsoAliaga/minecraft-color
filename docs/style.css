@@ -49,49 +49,49 @@ h1, h2, h3 {
 }
 @font-face {
    font-family: MinecraftiaRegular;
-   src: url(../assets/fonts/MinecraftRegular.otf);
+   /* src: url(../assets/fonts/MinecraftRegular.otf); */
    /* src: url(../assets/fonts/MinecraftiaRegular.ttf); */
-   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftiaRegular.ttf); */
+   src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftRegular.otf);
 }
 @font-face {
    font-family: MinecraftRegular;
-   src: url(../assets/fonts/MinecraftRegular.otf);
-   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftRegular.otf); */
+   /* src: url(../assets/fonts/MinecraftRegular.otf); */
+   src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftRegular.otf);
 }
 @font-face {
    font-family: MinecraftBold;
-   src: url(../assets/fonts/MinecraftBold.otf);
-   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftBold.otf); */
+   /* src: url(../assets/fonts/MinecraftBold.otf); */
+   src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftBold.otf);
 }
 @font-face {
    font-family: MinecraftItalic;
-   src: url(../assets/fonts/MinecraftItalic.otf);
-   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftItalic.otf); */
+   /* src: url(../assets/fonts/MinecraftItalic.otf); */
+   src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftItalic.otf);
 }
 @font-face {
    font-family: MinecraftBoldItalic;
-   src: url(../assets/fonts/MinecraftBoldItalic.otf);
-   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftBoldItalic.otf); */
+   /* src: url(../assets/fonts/MinecraftBoldItalic.otf); */
+   src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/MinecraftBoldItalic.otf);
 }
 @font-face {
    font-family: MonocraftRegular;
-   src: url(../assets/fonts/Monocraft-Light.otf);
-   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Light.otf); */
+   /* src: url(../assets/fonts/Monocraft-Light.otf); */
+   src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Light.otf);
 }
 @font-face {
    font-family: MonocraftBold;
-   src: url(../assets/fonts/Monocraft-SemiBold.otf);
-   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Bold.otf); */
+   /* src: url(../assets/fonts/Monocraft-SemiBold.otf); */
+   src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Bold.otf);
 }
 @font-face {
    font-family: MonocraftItalic;
-   src: url(../assets/fonts/Monocraft-Italic.otf);
-   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Italic.otf); */
+   /* src: url(../assets/fonts/Monocraft-Italic.otf); */
+   src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Italic.otf);
 }
 @font-face {
    font-family: MonocraftBoldItalic;
-   src: url(../assets/fonts/Monocraft-SemiBold-Italic.otf);
-   /* src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Bold-Italic.otf); */
+   /* src: url(../assets/fonts/Monocraft-SemiBold-Italic.otf); */
+   src: url(https://raw.githubusercontent.com/AlonsoAliaga/generator/main/assets/fonts/Monocraft-Bold-Italic.otf);
 }
 fieldset.group  { 
   margin: 0; 
