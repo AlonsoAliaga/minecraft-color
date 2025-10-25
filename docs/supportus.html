@@ -47,11 +47,20 @@
         let time = 15;
         const siteDomain = `minecraft-color`;
         const siteName = `MinecraftColor`;
+        setTimeout(()=>{
+          let div = document.createElement("div");
+          let h2 = document.createElement("h2");
+          h2.style.cssText = "font-size: 15px ;text-align: center;";
+          h2.innerHTML = `<br>⛔ This site doesn't contain any ad from <a href="https://www.google.com" rel="noopener" target="_blank">Google</a>!<br><br>`
+          div.appendChild(h2);
+          document.body.appendChild(div);
+        },150);
         populate();
         function populate(){
           fetch(decodeAndAdd("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0Fsb25zb0FsaWFnYS9BbG9uc29BbGlhZ2FBUEkvcmVmcy9oZWFkcy9tYWluL2FwaS9hZHMvYWRzLmpzb24="))
             .then(res => res.json())
             .then(content => {
+              
               let adsData = content;
               for(let adData of adsData) {
                 //console.log(adData);
