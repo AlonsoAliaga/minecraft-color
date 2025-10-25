@@ -145,11 +145,11 @@
                     button.innerText = `🚫 Disable AdBlock to unlock special features.`;
                     return;
                 }
-                window.title = `Unlock ${featureName} by clicking ads!`
+                window.title = `Unlock ${featureName} by clicking our ads!`
                 let penaltyTime = 0;
                 let interval = setInterval(()=>{
                     if(time < 0) {
-                        button.innerText = `🗝️ Click an ad below to unlock ${featureName}!`;
+                        button.innerText = `🗝️ Click one of our ads below to unlock ${featureName}!`;
                         ready();
                         clearInterval(interval);
                         return;
