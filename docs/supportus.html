@@ -54,8 +54,10 @@
           h2.innerHTML = `⛔ This site doesn't contain any ad from <a href="https://www.google.com" rel="noopener" target="_blank">Google</a>!<br><br>`
           div.appendChild(h2);
           document.body.appendChild(div);
+        },0);
+        setTimeout(()=>{
+          populate();
         },150);
-        populate();
         function populate(){
           fetch(decodeAndAdd("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0Fsb25zb0FsaWFnYS9BbG9uc29BbGlhZ2FBUEkvcmVmcy9oZWFkcy9tYWluL2FwaS9hZHMvYWRzLmpzb24="))
             .then(res => res.json())
