@@ -967,6 +967,7 @@ inputContent.addEventListener("keyup",function(){
 });
 
 function processAds() {
+  lockElementWithMessage(document.getElementById("lore-mode-option"),"adlocked",`Disable AdBlock to access lore preview!`)
   lockElementWithMessage(document.getElementById("chat-mode-option"),"adlocked",`Disable AdBlock to access chat preview!`)
   lockElementWithMessage(document.getElementById("sign-mode-option"),"adlocked",`Disable AdBlock to access sign preview!`)
 }
