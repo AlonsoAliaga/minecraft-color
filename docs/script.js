@@ -50,7 +50,7 @@ let showcaseModesAvailable = {
         displayName: "Lore Showcase 💎",
         elementId: "lore-mode-option",
         showcaseElementId: "showcase-lore-mode-option",
-        lobby: "lobby-1",
+        ad: "lobby-1",
         default: [
           `&d&l⚞ Boots of the Zephyr's Whisper ⚟&r`,
           `{{CUSTOM_IMAGE}}`,
