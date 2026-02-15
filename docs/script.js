@@ -888,6 +888,9 @@ window.addEventListener("DOMContentLoaded",()=>{
       loadChecking();
     },10000)
   },2500)
+  setTimeout(()=>{
+    if(typeof window.getRandomStyle == "undefined" && myTimeout == undefined) processAds();
+  },2000)
 });
 setInterval(()=>{
   document.getElementById("random-players").textContent = `${getRandomSecureInt(1,20)}/20`;
