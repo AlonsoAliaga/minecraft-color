@@ -786,6 +786,7 @@ function loadCounter() {
    });
  }
 }
+let myTimeout;
 function getRandomViewersMessage() {
   return onlineViewersMessages[Math.floor(Math.random() * onlineViewersMessages.length)]
 }
@@ -974,6 +975,7 @@ function processAds() {
   lockElementWithMessage(document.getElementById("lore-mode-option"),"adlocked",`Disable AdBlock to access lore preview!`)
   lockElementWithMessage(document.getElementById("chat-mode-option"),"adlocked",`Disable AdBlock to access chat preview!`)
   lockElementWithMessage(document.getElementById("sign-mode-option"),"adlocked",`Disable AdBlock to access sign preview!`)
+  layer();
 }
 
 const obfuscationMap2 = {

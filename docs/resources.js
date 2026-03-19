@@ -31,7 +31,7 @@ async function detectAdBlock() {
 const hiddenBody = false
 const isSpanishLanguage = navigator.language === 'es-ES' ? true : false;
 const imagesCdnUrl = 'https://cdn.jsdelivr.net/gh/The-3Labs-Team/js-anti-adblock@main/assets'  
-const body = document.querySelector('body')
+const bodyT = document.querySelector('body')
 window.onload = async () => {
   const adBlockEnabled = await detectAdBlock();
   if (adBlockEnabled) {
@@ -39,19 +39,19 @@ window.onload = async () => {
     if(!isTimeToRemember()) {
       return;
     }
-    body.setAttribute('aria-hidden', 'true');
+    bodyT.setAttribute('aria-hidden', 'true');
     if (hiddenBody) {
-      body.innerHTML = '';
+      bodyT.innerHTML = '';
     }
     showBannerAdBlock();
   }
 };
 function showBannerAdBlock () {
-  body.style.overflow = 'hidden'
+  bodyT.style.overflow = 'hidden'
   let reminder = allowReminder ? `<span onclick="remindMe();" style="width: 50%; height: 60px; padding: 10px; text-align: center; display: flex; justify-content: center; align-items:center; cursor: pointer; background-color: #ff5a5a; color: white; font-weight: bold; ">
                     ${isSpanishLanguage ? `Recuerdame en<br>${hours} horas` : `Remind me<br>in ${hours} hours`}
                   </span>` : ``
-  body.innerHTML +=
+  bodyT.innerHTML +=
         `
         <div style="${getRandomStyle()};">
         <!-- <div class="style"> -->
@@ -112,7 +112,7 @@ function showBannerAdBlock () {
       }
     }
   `;
-  body.appendChild(script);
+  bodyT.appendChild(script);
 }
 function getRandomStyle () {
   const styles = [
